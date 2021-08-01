@@ -9,7 +9,7 @@
 import UIKit
 
 import UIKit
-class TabController: UITabBarController {
+class OffersTabController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,13 +71,11 @@ class TabController: UITabBarController {
         let verticalConstraint = titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         let widthConstraint = titleLabel.widthAnchor.constraint(equalToConstant: 100)
         let heightConstraint = titleLabel.heightAnchor.constraint(equalToConstant: 100)
-        view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
-        
-                
+        view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])                
     }
 }
 
-extension TabController: UITabBarControllerDelegate {
+extension OffersTabController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
     }
 }
