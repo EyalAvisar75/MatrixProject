@@ -39,18 +39,42 @@ class TabController: UITabBarController {
         // Create Tab three
         let tabThree = TreatsController()
         let tabThreeBarItem = UITabBarItem(title: "My Treats", image: nil, selectedImage: nil)
-
+        
+        var title = "My Treats"
+        addLabel(view: tabThree.view, title: title)
+        
         tabThree.tabBarItem = tabThreeBarItem
 
         // Create Tab three
-        let tabFour = FavoritesController()
-        let tabFourBarItem = UITabBarItem(title: "Favorites", image: nil, selectedImage: nil)
-
-        tabFour.tabBarItem = tabFourBarItem
+        title = "Favorites"
         
+        let tabFour = FavoritesController()
+        let tabFourBarItem = UITabBarItem(title: title, image: nil, selectedImage: nil)
+        
+        tabFour.tabBarItem = tabFourBarItem
+        addLabel(view: tabFour.view, title: title)
+
         
         self.viewControllers = [tabOne, tabTwo, tabThree, tabFour]
-    }    
+    }
+    
+    //Helper Methods
+    
+    func addLabel(view: UIView, title: String) {
+        let titleLabel = UILabel()
+        titleLabel.text = title
+        view.addSubview(titleLabel)
+
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let horizontalConstraint = titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        let verticalConstraint = titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        let widthConstraint = titleLabel.widthAnchor.constraint(equalToConstant: 100)
+        let heightConstraint = titleLabel.heightAnchor.constraint(equalToConstant: 100)
+        view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+        
+                
+    }
 }
 
 extension TabController: UITabBarControllerDelegate {
