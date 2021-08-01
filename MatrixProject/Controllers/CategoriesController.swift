@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CategoriesController: UIViewController {
     
     //MARK:- View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .blue
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -23,12 +23,15 @@ class ViewController: UIViewController {
     
     //MARK:- Helper Methods
 
-    func checkConnection() {
+    @discardableResult func checkConnection() -> Bool {
         NetworkManager.shared.startMonitoring()
         
         if !NetworkManager.shared.isConnected() {
             offerSetting()
+            return false
         }
+        
+        return true
     }
     
     func offerSetting() {
