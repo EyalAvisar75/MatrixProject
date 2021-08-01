@@ -23,6 +23,8 @@
 		180FE2B526B6AC5C00801132 /* CategoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE2B426B6AC5C00801132 /* CategoryTableCell.swift */; };
 		180FE2B726B6ACC900801132 /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE2B626B6ACC900801132 /* ImageCollectionCell.swift */; };
 		180FE2B926B6D46100801132 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE2B826B6D46100801132 /* CategoryController.swift */; };
+		180FE2BB26B6ECE700801132 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE2BA26B6ECE700801132 /* GenericDataSource.swift */; };
+		180FE2BD26B6F53800801132 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE2BC26B6F53800801132 /* UtilityFunctions.swift */; };
 		CFBACD2E40DD0720896E4762 /* Pods_MatrixProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8541469C77CD5F9ABD1EC13 /* Pods_MatrixProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		180FE2B426B6AC5C00801132 /* CategoryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableCell.swift; sourceTree = "<group>"; };
 		180FE2B626B6ACC900801132 /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		180FE2B826B6D46100801132 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		180FE2BA26B6ECE700801132 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		180FE2BC26B6F53800801132 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 		B55F7FD0F7C73A93DFFD2776 /* Pods-MatrixProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixProject.release.xcconfig"; path = "Target Support Files/Pods-MatrixProject/Pods-MatrixProject.release.xcconfig"; sourceTree = "<group>"; };
 		E8541469C77CD5F9ABD1EC13 /* Pods_MatrixProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +98,8 @@
 				180FE28A26B681C100801132 /* AppDelegate.swift */,
 				180FE28C26B681C100801132 /* SceneDelegate.swift */,
 				180FE2A826B68C4200801132 /* Data.swift */,
+				180FE2BA26B6ECE700801132 /* GenericDataSource.swift */,
+				180FE2BC26B6F53800801132 /* UtilityFunctions.swift */,
 				180FE29826B681C400801132 /* Info.plist */,
 				180FE29E26B6856700801132 /* Controllers */,
 				180FE2A026B6858400801132 /* Models */,
@@ -279,12 +285,14 @@
 				180FE2A526B6879800801132 /* NetworkManager.swift in Sources */,
 				180FE2B526B6AC5C00801132 /* CategoryTableCell.swift in Sources */,
 				180FE2AF26B693A900801132 /* OffersTabController.swift in Sources */,
+				180FE2BD26B6F53800801132 /* UtilityFunctions.swift in Sources */,
 				180FE2B726B6ACC900801132 /* ImageCollectionCell.swift in Sources */,
 				180FE2AD26B6930800801132 /* RecommendedController.swift in Sources */,
 				180FE2B926B6D46100801132 /* CategoryController.swift in Sources */,
 				180FE2B126B699BF00801132 /* TreatsController.swift in Sources */,
 				180FE2A926B68C4200801132 /* Data.swift in Sources */,
 				180FE28F26B681C100801132 /* CategoriesController.swift in Sources */,
+				180FE2BB26B6ECE700801132 /* GenericDataSource.swift in Sources */,
 				180FE2AB26B68D2100801132 /* Models.swift in Sources */,
 				180FE2B326B69A0200801132 /* FavoritesController.swift in Sources */,
 				180FE28B26B681C100801132 /* AppDelegate.swift in Sources */,

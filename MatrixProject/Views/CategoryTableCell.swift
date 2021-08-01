@@ -46,6 +46,7 @@ class CategoryTableCell: UITableViewCell {
     //MARK:- Helper methods
     func addCategoryGallery() {
         contentView.addSubview(categoryGallery)
+        categoryGallery.semanticContentAttribute = .forceRightToLeft
         categoryGallery.translatesAutoresizingMaskIntoConstraints = false
         
         categoryGallery.topAnchor.constraint(equalTo: categoryName.bottomAnchor).isActive = true
@@ -62,6 +63,7 @@ class CategoryTableCell: UITableViewCell {
     func addLabel() {
 
         contentView.addSubview(categoryName)
+        
         categoryName.translatesAutoresizingMaskIntoConstraints = false
         
         let topConstraint = categoryName.topAnchor.constraint(equalTo: contentView.topAnchor)
@@ -90,7 +92,7 @@ extension CategoryTableCell: UICollectionViewDataSource {
         cell.isHidden = false
         
         cell.backgroundColor = .blue
-        cell.discountImage.image = UIImage(systemName: "person")//UIImage(named: "happy")
+        cell.discountImage.image = UIImage(systemName: "person")
         
         cell.subtitleLabel.text = (attractionsByCategories[categoryId - 1][indexPath.row]["STitle"] as! String)
         
@@ -106,7 +108,6 @@ extension CategoryTableCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
 
-        print("Hello", categoryId)
         if attractionsByCategories[categoryId - 1].count == indexPath.row {
             return
         }
