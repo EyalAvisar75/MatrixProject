@@ -133,7 +133,7 @@ extension CategoriesController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.bounds.height / 5
+        return view.bounds.height / 3
     }
 }
 

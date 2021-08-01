@@ -27,6 +27,9 @@ class ImageCollectionCell: UICollectionViewCell {
         contentView.addSubview(discountImage)
         
         subtitleLabel = UILabel(frame: CGRect(x: 20, y: 20, width: self.bounds.width - 20, height: 20))
+        subtitleLabel.clipsToBounds = false
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.lineBreakMode = .byWordWrapping
         
         subtitleLabel.textColor = UIColor.white
         contentView.addSubview(subtitleLabel)

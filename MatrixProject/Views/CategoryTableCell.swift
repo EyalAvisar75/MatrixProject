@@ -17,14 +17,14 @@ class CategoryTableCell: UITableViewCell {
     //MARK:- Properties
     
     var categoryName = UILabel()
-
+    
     let categoryGallery: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = true
         collectionView.showsVerticalScrollIndicator = false
         return collectionView
     }()
@@ -32,7 +32,7 @@ class CategoryTableCell: UITableViewCell {
     var categoryId = 0
     var viewTitle = "nada"
     public weak var attractionDelegate: CategoryTableCellDelegate?
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addLabel()
@@ -61,9 +61,9 @@ class CategoryTableCell: UITableViewCell {
     }
     
     func addLabel() {
-
-        contentView.addSubview(categoryName)
         
+        contentView.addSubview(categoryName)
+                
         categoryName.translatesAutoresizingMaskIntoConstraints = false
         
         let topConstraint = categoryName.topAnchor.constraint(equalTo: contentView.topAnchor)
@@ -78,7 +78,7 @@ extension CategoryTableCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if viewTitle == "favorites" {
-//            categoryGallery.isPagingEnabled = true
+            categoryGallery.isPagingEnabled = true
         }
         
         return attractionsByCategories[categoryId - 1].count
@@ -107,7 +107,7 @@ extension CategoryTableCell: UICollectionViewDataSource {
 extension CategoryTableCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-
+        
         if attractionsByCategories[categoryId - 1].count == indexPath.row {
             return
         }
@@ -115,14 +115,9 @@ extension CategoryTableCell: UICollectionViewDelegate {
     }
 }
 
-extension UICollectionViewFlowLayout {
-
-    open override var flipsHorizontallyInOppositeLayoutDirection: Bool {
-        return true
-    }
-    
+extension CategoryTableCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 250)
+        return CGSize(width: contentView.bounds.width / 3, height: 100)
     }
 }
 
