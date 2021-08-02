@@ -19,7 +19,7 @@ class CategoryTableCell: UITableViewCell {
     var categoryName = UILabel()
     
     let categoryGallery: UICollectionView = {
-        let layout = SmoothFlowLayout() //CenterCollectionFlowLayout()
+        let layout = SmoothFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
@@ -61,7 +61,7 @@ class CategoryTableCell: UITableViewCell {
         categoryGallery.dataSource = self
         categoryGallery.collectionViewLayout = isCenterLayout ? CenterCollectionFlowLayout() : SmoothFlowLayout()
         
-        categoryGallery.register(ImageCollectionCell.self, forCellWithReuseIdentifier: "ImageCell")
+        categoryGallery.register(ImageCollectionCell.self, forCellWithReuseIdentifier: Identifiers.categoryGallery.rawValue)
     }
     
     func addLabel() {
@@ -88,7 +88,7 @@ extension CategoryTableCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.categoryGallery.rawValue, for: indexPath) as! ImageCollectionCell
         
         cell.isHidden = false
         

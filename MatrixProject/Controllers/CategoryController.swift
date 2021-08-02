@@ -13,10 +13,9 @@ class CategoryController: UIViewController {
     var categoryName = UILabel()
     var categoryId = UILabel()
     var categoryImage = UIImageView()
-    var item: [Int]?
+    var item: [Int] = [0, 0]
     
     override func viewDidLoad() {
-        print("my item", item)
         super.viewDidLoad()
         addDismissButton()
         addCategoryName()
@@ -34,10 +33,7 @@ class CategoryController: UIViewController {
     func addCategoryName() {
         categoryName = UILabel(frame: CGRect(x: 0, y: 110, width: view.bounds.width, height: 100))
         categoryName.textAlignment = .right
-        
-        if let item = item {
-            categoryName.text = attractionsByCategories[item[0]][item[1]]["Title"] as! String
-        }
+        categoryName.text = attractionsByCategories[item[0]][item[1]]["Title"] as! String
         
         view.addSubview(categoryName)
     }
@@ -46,9 +42,7 @@ class CategoryController: UIViewController {
         categoryId = UILabel(frame: CGRect(x: 0, y: 210, width: view.bounds.width, height: 100))
         categoryId.textAlignment = .right
         
-        if let item = item {
-            categoryId.text = "קטגוריה" + " " +  String(attractionsByCategories[item[0]][item[1]]["CatId"] as! Int)
-        }
+        categoryId.text = "קטגוריה" + " " +  String(attractionsByCategories[item[0]][item[1]]["CatId"] as! Int)
         
         view.addSubview(categoryId)
     }
