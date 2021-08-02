@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180142AE26B7328000D5229E /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180142AD26B7328000D5229E /* CustomViewController.swift */; };
 		180142B226B74B1D00D5229E /* CenterCollectionFlowLayout\.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180142B126B74B1D00D5229E /* CenterCollectionFlowLayout\.swift */; };
+		18037F9026B827DC006618D7 /* CustomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18037F8F26B827DC006618D7 /* CustomController.swift */; };
 		180FE28B26B681C100801132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE28A26B681C100801132 /* AppDelegate.swift */; };
 		180FE28D26B681C100801132 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE28C26B681C100801132 /* SceneDelegate.swift */; };
 		180FE28F26B681C100801132 /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE28E26B681C100801132 /* CategoriesController.swift */; };
@@ -32,8 +32,8 @@
 
 /* Begin PBXFileReference section */
 		0D6A424B9711C66AFA0E8648 /* Pods-MatrixProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixProject.debug.xcconfig"; path = "Target Support Files/Pods-MatrixProject/Pods-MatrixProject.debug.xcconfig"; sourceTree = "<group>"; };
-		180142AD26B7328000D5229E /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		180142B126B74B1D00D5229E /* CenterCollectionFlowLayout\.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenterCollectionFlowLayout\\.swift"; sourceTree = "<group>"; };
+		18037F8F26B827DC006618D7 /* CustomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomController.swift; path = "/Users/eyalavisar/Desktop/xcode projects/MatrixProject/MatrixProject/Controllers/CustomController.swift"; sourceTree = "<absolute>"; };
 		180FE28726B681C000801132 /* MatrixProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		180FE28A26B681C100801132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		180FE28C26B681C100801132 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				180FE2B226B69A0200801132 /* FavoritesController.swift */,
 				180FE2AE26B693A900801132 /* OffersTabController.swift */,
 				180FE2B826B6D46100801132 /* CategoryController.swift */,
-				180142AD26B7328000D5229E /* CustomViewController.swift */,
+				18037F8F26B827DC006618D7 /* CustomController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,11 +303,11 @@
 				180FE2AF26B693A900801132 /* OffersTabController.swift in Sources */,
 				180FE2B726B6ACC900801132 /* ImageCollectionCell.swift in Sources */,
 				180FE2AD26B6930800801132 /* RecommendedController.swift in Sources */,
+				18037F9026B827DC006618D7 /* CustomController.swift in Sources */,
 				180FE2B926B6D46100801132 /* CategoryController.swift in Sources */,
 				180FE2B126B699BF00801132 /* TreatsController.swift in Sources */,
 				18229DCE26B776B7007CBF29 /* IdentifiersEnum.swift in Sources */,
 				180FE2A926B68C4200801132 /* Data.swift in Sources */,
-				180142AE26B7328000D5229E /* CustomViewController.swift in Sources */,
 				180FE28F26B681C100801132 /* CategoriesController.swift in Sources */,
 				180FE2AB26B68D2100801132 /* CategoryModel.swift in Sources */,
 				180FE2B326B69A0200801132 /* FavoritesController.swift in Sources */,
