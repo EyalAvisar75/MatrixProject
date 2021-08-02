@@ -9,7 +9,6 @@
 import UIKit
 
 class SmoothFlowLayout: UICollectionViewFlowLayout {
-    let activeDistance: CGFloat = 200
     
     override init() {
         super.init()
@@ -22,18 +21,21 @@ class SmoothFlowLayout: UICollectionViewFlowLayout {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
+    
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         
         guard let collectionView = collectionView else {return .zero}
-        
+
         let targetRect = CGRect(x: proposedContentOffset.x, y: 0, width: collectionView.frame.width, height: collectionView.frame.height)
+        
+        guard let rectAttributes = super.layoutAttributesForElements(in: targetRect) else {return .zero}
         
         var offsetAdjustment = CGFloat.greatestFiniteMagnitude
         
         let rightEdge = proposedContentOffset.x + collectionView.frame.width
         
         
-        guard let rectAttributes = super.layoutAttributesForElements(in: targetRect) else {return .zero}
+        
         
         for attributes in rectAttributes {
             let itemRightEdge = attributes.frame.maxX

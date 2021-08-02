@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180142AE26B7328000D5229E /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180142AD26B7328000D5229E /* CustomViewController.swift */; };
+		180142B226B74B1D00D5229E /* CenterCollectionFlowLayout\.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180142B126B74B1D00D5229E /* CenterCollectionFlowLayout\.swift */; };
 		180FE28B26B681C100801132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE28A26B681C100801132 /* AppDelegate.swift */; };
 		180FE28D26B681C100801132 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE28C26B681C100801132 /* SceneDelegate.swift */; };
 		180FE28F26B681C100801132 /* CategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FE28E26B681C100801132 /* CategoriesController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		0D6A424B9711C66AFA0E8648 /* Pods-MatrixProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixProject.debug.xcconfig"; path = "Target Support Files/Pods-MatrixProject/Pods-MatrixProject.debug.xcconfig"; sourceTree = "<group>"; };
 		180142AD26B7328000D5229E /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		180142B126B74B1D00D5229E /* CenterCollectionFlowLayout\.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CenterCollectionFlowLayout\\.swift"; sourceTree = "<group>"; };
 		180FE28726B681C000801132 /* MatrixProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		180FE28A26B681C100801132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		180FE28C26B681C100801132 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				180FE28C26B681C100801132 /* SceneDelegate.swift */,
 				180FE2A826B68C4200801132 /* Data.swift */,
 				180FE2BE26B70DFC00801132 /* SmoothFlowLayout.swift */,
+				180142B126B74B1D00D5229E /* CenterCollectionFlowLayout\.swift */,
 				180FE29826B681C400801132 /* Info.plist */,
 				180FE29E26B6856700801132 /* Controllers */,
 				180FE2A026B6858400801132 /* Models */,
@@ -284,6 +287,7 @@
 			files = (
 				180FE2A526B6879800801132 /* NetworkManager.swift in Sources */,
 				180FE2BF26B70DFC00801132 /* SmoothFlowLayout.swift in Sources */,
+				180142B226B74B1D00D5229E /* CenterCollectionFlowLayout\.swift in Sources */,
 				180FE2B526B6AC5C00801132 /* CategoryTableCell.swift in Sources */,
 				180FE2AF26B693A900801132 /* OffersTabController.swift in Sources */,
 				180FE2B726B6ACC900801132 /* ImageCollectionCell.swift in Sources */,

@@ -15,11 +15,12 @@ protocol CategoryTableCellDelegate : AnyObject {
 class CategoryTableCell: UITableViewCell {
     
     //MARK:- Properties
-    
+    var isCenterLayout = false
     var categoryName = UILabel()
     
     let categoryGallery: UICollectionView = {
-        let layout = SmoothFlowLayout()
+        let layout = SmoothFlowLayout() //CenterCollectionFlowLayout()
+        layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +46,8 @@ class CategoryTableCell: UITableViewCell {
     //MARK:- Helper methods
     func addCategoryGallery() {
         contentView.addSubview(categoryGallery)
+        
+        
         categoryGallery.bounces = false
         categoryGallery.semanticContentAttribute = .forceRightToLeft
         categoryGallery.translatesAutoresizingMaskIntoConstraints = false
@@ -56,6 +59,7 @@ class CategoryTableCell: UITableViewCell {
         
         categoryGallery.delegate = self
         categoryGallery.dataSource = self
+        categoryGallery.collectionViewLayout = isCenterLayout ? CenterCollectionFlowLayout() : SmoothFlowLayout()
         
         categoryGallery.register(ImageCollectionCell.self, forCellWithReuseIdentifier: "ImageCell")
     }
@@ -78,11 +82,6 @@ class CategoryTableCell: UITableViewCell {
 
 extension CategoryTableCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        if viewTitle == "favorites" {
-//            categoryGallery.isPagingEnabled = true
-        }
-        
         return attractionsByCategories[categoryId - 1].count
     }
     
@@ -93,15 +92,13 @@ extension CategoryTableCell: UICollectionViewDataSource {
         
         cell.isHidden = false
         
-        cell.backgroundColor = .blue
-        cell.discountImage.image = UIImage(systemName: "person")
-        
+        cell.discountImage.image = UIImage(systemName: "person")        
         cell.subtitleLabel.text = (attractionsByCategories[categoryId - 1][indexPath.row]["STitle"] as! String)
+        
         
         if attractionsByCategories[categoryId - 1].count == indexPath.row {
             cell.isHidden = true
         }
-        
         return cell
     }
 }
@@ -116,4 +113,15 @@ extension CategoryTableCell: UICollectionViewDelegate {
         attractionDelegate?.didSelectItem(categoryItem: (categoryId - 1, indexPath.row))
     }
 }
+
+extension CategoryTableCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+ 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: 150, height: 150)
+    }
+}
+
 

@@ -31,7 +31,7 @@ class ImageCollectionCell: UICollectionViewCell {
         subtitleLabel.numberOfLines = 0
         subtitleLabel.lineBreakMode = .byWordWrapping
         
-        subtitleLabel.textColor = UIColor.white
+        subtitleLabel.textColor = UIColor.black
         contentView.addSubview(subtitleLabel)
     }
     
